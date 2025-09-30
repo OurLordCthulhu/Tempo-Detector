@@ -1,0 +1,28 @@
+C:\Users\Perif\source\repos\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Perif\source\repos\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Perif\source\repos\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Perif\source\repos\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\Tempo Detector_MarkupCompile.cache
+C:\Users\Perif\source\repos\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\Tempo Detector.g.resources
+C:\Users\Perif\source\repos\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\Tempo Detector.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Perif\source\repos\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\Tempo Detector.AssemblyInfoInputs.cache
+C:\Users\Perif\source\repos\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\Tempo Detector.AssemblyInfo.cs
+C:\Users\Perif\source\repos\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\Tempo Detector.csproj.CoreCompileInputs.cache
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\bin\Debug\net8.0-windows\Tempo Detector.exe
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\bin\Debug\net8.0-windows\Tempo Detector.deps.json
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\bin\Debug\net8.0-windows\Tempo Detector.runtimeconfig.json
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\bin\Debug\net8.0-windows\Tempo Detector.dll
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\bin\Debug\net8.0-windows\Tempo Detector.pdb
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\Tempo Detector_MarkupCompile.cache
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\Tempo Detector.g.resources
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\Tempo Detector.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\Tempo Detector.AssemblyInfoInputs.cache
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\Tempo Detector.AssemblyInfo.cs
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\Tempo Detector.csproj.CoreCompileInputs.cache
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\Tempo Detector.dll
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\refint\Tempo Detector.dll
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\Tempo Detector.pdb
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\Tempo Detector.genruntimeconfig.cache
+C:\Users\Perif\OneDrive\Documents\Desktop\Programing\Tempo Detector\Tempo Detector\obj\Debug\net8.0-windows\ref\Tempo Detector.dll

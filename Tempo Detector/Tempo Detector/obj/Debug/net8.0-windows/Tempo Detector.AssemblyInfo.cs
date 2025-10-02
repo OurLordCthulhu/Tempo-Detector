@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tempo Detector")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+127bfd61be56ba30c222bea53cc95a2a64d4e312")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tempo Detector")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tempo Detector")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

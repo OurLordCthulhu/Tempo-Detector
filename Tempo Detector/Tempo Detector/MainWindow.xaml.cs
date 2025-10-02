@@ -1,22 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Media;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Threading;
-
+using NAudio.Wave;
+using NAudio.Wave.SampleProviders;
 
 namespace Tempo_Detector
 {
-
     public partial class MainWindow : Window
     {
         private Stopwatch stopwatch = new Stopwatch();
-        private List<Double> tapIntervals = new List<double>();
+        private List<double> tapIntervals = new List<double>();
         private DispatcherTimer metronomeTimer;
-        private SoundPlayer metronomeSoundPlayer;
+
+        // NAudio specific variables for audio playback
+        private WaveOutEvent outputDevice;
+        private AudioFileReader audioFile;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -24,18 +26,24 @@ namespace Tempo_Detector
 
             metronomeTimer = new DispatcherTimer();
             metronomeTimer.Tick += MetronomeTick;
-            //add sound file
+
+            // Initialize NAudio and load the sound file
             try
             {
-                metronomeSoundPlayer = new SoundPlayer("click.wav");
+                audioFile = new AudioFileReader("click.wav");
+                outputDevice = new WaveOutEvent();
+                outputDevice.Init(audioFile);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading metronome sound: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Error loading audio file: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
+            // Hook up the button and slider events
             PlayPauseButton.Click += PlayPauseButton_Click;
             VolumeSlider.ValueChanged += VolumeSlider_ValueChanged;
         }
+
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)
@@ -43,10 +51,12 @@ namespace Tempo_Detector
                 ProcessTap();
             }
         }
+
         private void TapButton_Click(object sender, RoutedEventArgs e)
         {
             ProcessTap();
         }
+
         private void ProcessTap()
         {
             double intervalMilliseconds = stopwatch.Elapsed.TotalMilliseconds;
@@ -55,20 +65,21 @@ namespace Tempo_Detector
             if (tapIntervals.Count >= 2)
             {
                 CalculateBpm();
-
             }
         }
+
         private void CalculateBpm()
         {
             double sumOfIntervals = 0;
             int count = 0;
 
-            int startIndex = Math.Max(0, tapIntervals.Count - 8);
+            int startIndex = Math.Max(0, tapIntervals.Count - 4);
             for (int i = startIndex; i < tapIntervals.Count; i++)
             {
                 sumOfIntervals += tapIntervals[i];
                 count++;
             }
+
             if (count > 0)
             {
                 double averageIntervalMs = sumOfIntervals / count;
@@ -83,11 +94,9 @@ namespace Tempo_Detector
 
         private void UpdateMetronomeInterval(double averageIntervalMs)
         {
+            if (averageIntervalMs > 0)
             {
-                if (averageIntervalMs > 0)
-                {
-                    metronomeTimer.Interval = TimeSpan.FromMilliseconds(averageIntervalMs);
-                }
+                metronomeTimer.Interval = TimeSpan.FromMilliseconds(averageIntervalMs);
             }
         }
 
@@ -97,7 +106,6 @@ namespace Tempo_Detector
             {
                 metronomeTimer.Stop();
                 PlayPauseButton.Content = "Play";
-
             }
             else
             {
@@ -109,13 +117,23 @@ namespace Tempo_Detector
                 }
             }
         }
+
         private void MetronomeTick(object sender, EventArgs e)
         {
-            metronomeSoundPlayer?.Play();
+            if (outputDevice.PlaybackState == PlaybackState.Playing)
+            {
+                outputDevice.Stop();
+            }
+            audioFile.Position = 0; // Rewind the audio file to the beginning
+            outputDevice.Play();
         }
+
         private void VolumeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            //temp empty
+            if (outputDevice != null)
+            {
+                outputDevice.Volume = (float)VolumeSlider.Value;
+            }
         }
     }
 }
